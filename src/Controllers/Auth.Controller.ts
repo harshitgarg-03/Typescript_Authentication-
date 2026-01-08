@@ -34,6 +34,7 @@ const Generate_Access_Refresh_Token = async (
 };
 
 
+
 export const RegisterUser = AsyncHandler(
     async (req: Request, res: Response) => {
         const { name, email, password } = req.validation;
