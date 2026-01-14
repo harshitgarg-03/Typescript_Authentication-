@@ -14,15 +14,12 @@ import { log } from "console";
 import { userInfo } from "os";
 
 
-
-
-
-
 const Generate_Access_Refresh_Token = async (
     userId: string | Types.ObjectId
 ) => {
     const user = await UserM.findById(userId);
 
+    
     try {
         const RefreshToken = await user?.generateRefreshtoken();
         const AccessToken = await user?.generateAccestoken();
